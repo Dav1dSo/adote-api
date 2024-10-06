@@ -3,8 +3,9 @@ from src.models.mysql.entities.people import PeopleTable
 from src.models.mysql.interfaces.people_repository_interface import (
     PeopleRepositoryInterface,
 )
+from .interfaces.person_create_controller import PersonCreateControllerInterface
 
-class PersonCreateController():
+class PersonCreateController(PersonCreateControllerInterface):
     def __init__(self, people_repository: PeopleRepositoryInterface) -> None:
         self.__people_repository = people_repository
 

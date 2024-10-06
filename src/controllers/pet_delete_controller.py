@@ -1,6 +1,7 @@
 from src.models.mysql.repositories.pets_repository import PetsRepositoryInterface
+from .interfaces.pet_delete_controller import PetDeleterControllerInterface
 
-class PetDeleterController:
+class PetDeleterController(PetDeleterControllerInterface):
     def __init__(self, pet_repository: PetsRepositoryInterface) -> None:
         self._pet_repository = pet_repository
 
