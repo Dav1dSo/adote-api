@@ -1,8 +1,8 @@
 from src.models.mysql.entities.people import PeopleTable
 from src.models.mysql.entities.pets import PetsTable
+from src.models.mysql.interfaces.people_repository_interface import PeopleRepositoryInterface
 
-
-class PeopleRepository:
+class PeopleRepository(PeopleRepositoryInterface):
     def __init__(self, db_connection) -> None:
         self.__db_connection = db_connection
 
