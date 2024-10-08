@@ -12,7 +12,7 @@ DB_NAME = os.getenv("DB_NAME")
 
 DATABASE_URL = f"mysql+mysqlconnector://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"
 
-class DBConnerctionHandler:
+class DBConnectionHandler:
     def __init__(self) -> None:
         self.__connection_string = DATABASE_URL 
 
@@ -33,5 +33,5 @@ class DBConnerctionHandler:
         self.session.close()
         
 
-db_connection_handler = DBConnerctionHandler()
+db_connection_handler = DBConnectionHandler()
     
